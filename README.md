@@ -237,6 +237,12 @@ Shorten the wires and consider a 74HCT/74AHCT input buffer.
 
 The Mega has fallen behind the VGA stream. Check that both sides use 2 Mbps and that the VGA sketch uses 4 MHz XCLK. The mode may still be unreliable because the no-FIFO camera cannot pause while the Mega transmits data.
 
+## Acknowledgements
+
+This project was inspired by the timing and no-framebuffer approach used
+by the LiveOV7670 project. The Arduino Mega implementation, serial protocol,
+capture logic and Python receiver were developed separately for this project.
+
 ## Licence
 
 This project is available under the [MIT License](LICENSE).
