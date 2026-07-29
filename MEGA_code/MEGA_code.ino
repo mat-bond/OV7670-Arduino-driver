@@ -1,7 +1,7 @@
 /*
   OV7670 VGA RGB565 still-image streamer for Arduino Mega 2560
 
-  Architecture: one contiguous 8-bit camera port, a 1'280-bytes line buffer,
+  Architecture: one contiguous 8-bit camera port, a 1,280-byte RGB565 row buffer,
   direct UART register access, and camera/UART work overlapped while each
   row is captured. The host protocol is intentionally simple for Python compatibility.
 */
