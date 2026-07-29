@@ -239,9 +239,11 @@ The Mega has fallen behind the VGA stream. Check that both sides use 2 Mbps and 
 
 ## Acknowledgements
 
-This project was inspired by the timing and no-framebuffer approach used
-by the LiveOV7670 project. The Arduino Mega implementation, serial protocol,
-capture logic and Python receiver were developed separately for this project.
+This project was inspired by the timing and no-framebuffer approach used by
+[LiveOV7670](https://github.com/indrekluuk/LiveOV7670).
+
+The Arduino Mega implementation, serial protocol, capture logic, and Python
+receiver were developed separately for this project.
 
 ## Licence
 
