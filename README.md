@@ -189,7 +189,7 @@ The driver can disable automatic exposure and use fixed values:
 
 ```cpp
 static constexpr bool USE_MANUAL_EXPOSURE = true;
-static constexpr uint16_t MANUAL_EXPOSURE = 12;
+static constexpr uint16_t MANUAL_EXPOSURE = 6;
 static constexpr uint8_t MANUAL_GAIN = 0x00;
 ```
 
