@@ -5,8 +5,9 @@
 Current project files:
 
 ```text
-MEGA_code.ino  # Arduino Mega 2560 camera driver
-receiver.py    # Python image receiver and saver
+MEGA_code/
+└── MEGA_code.ino  # Arduino Mega 2560 camera driver
+receiver.py        # Python image receiver and saver
 ```
 
 An Arduino Mega 2560 driver and host-side Python toolkit for capturing images from a **bare OV7670 camera module without FIFO**.
