@@ -18,7 +18,7 @@ The driver:
 - captures the 8-bit parallel camera bus using direct AVR port access;
 - synchronises frames and rows using VSYNC, HREF and PCLK;
 - streams raw RGB565 pixels to a computer over UART;
-- supports still-image capture and a slow auto-refreshing preview.
+- supports still-image capture through a host-side Python receiver.
 
 > [!IMPORTANT]
 > The OV7670 uses 3.3 V power and logic. Do not connect 5 V directly to the camera's power, MCLK or SCCB pins.
@@ -58,7 +58,7 @@ A 3.3 V-compatible buffer such as a 74HCT245 or 74AHCT125 can improve signal rel
 | VCC | 3.3 V |
 | GND | Mega GND |
 
-## Recommended QVGA setup
+## Current VGA setup
 
 Upload:
 
@@ -90,7 +90,7 @@ Install the dependencies:
 python3 -m pip install pyserial Pillow
 ```
 
-Requires packages are:
+Required packages are:
 
 ```text
 pyserial
@@ -115,7 +115,7 @@ P.S: The Arduino IDE shows the port that the board is connected to.
 
 Only one application may use the serial port at a time. Close the Arduino Serial Monitor before running the Python script.
 
-## Capture a QVGA still image
+## Capture a VGA still image
 
 Upload to Arduino Board:
 
