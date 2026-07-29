@@ -72,7 +72,7 @@ Then use the Python program:
 receiver.py
 ```
 
-The current working RGB565 interpretation is **C byte swapped**:
+The receiver uses byte-swapped RGB565 ordering:
 
 ```python
 pixel = (second << 8) | first
