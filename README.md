@@ -32,7 +32,6 @@ The driver:
 - 4.7 kΩ pull-up resistor from SCL to 3.3 V
 - 5 V-to-3.3 V divider or suitable level shifter for MCLK
 - Short jumper wires
-- Recommended: 100 nF decoupling capacitor close to the camera module
 
 A 3.3 V-compatible buffer such as a 74HCT245 or 74AHCT125 can improve signal reliability on the camera-to-Mega data and timing lines.
 
