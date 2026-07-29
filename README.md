@@ -1,5 +1,7 @@
 # OV7670 RGB565 Driver for Arduino Mega 2560
 
+⚠️⚠️⚠️ Work in progress, expect changes
+
 Current project files:
 
 ```text
