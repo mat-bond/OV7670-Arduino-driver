@@ -13,7 +13,7 @@ An Arduino Mega 2560 driver and host-side Python toolkit for capturing images fr
 
 The driver:
 
-- generates the camera XCLK signal;
+- generates the camera MCLK signal;
 - configures the OV7670 over its two-wire SCCB interface;
 - captures the 8-bit parallel camera bus using direct AVR port access;
 - synchronises frames and rows using VSYNC, HREF and PCLK;
@@ -21,7 +21,7 @@ The driver:
 - supports still-image capture and a slow auto-refreshing preview.
 
 > [!IMPORTANT]
-> The OV7670 uses 3.3 V power and logic. Do not connect 5 V directly to the camera's power, XCLK or SCCB pins.
+> The OV7670 uses 3.3 V power and logic. Do not connect 5 V directly to the camera's power, MCLK or SCCB pins.
 
 ## Hardware
 
@@ -30,7 +30,7 @@ The driver:
 - Regulated 3.3 V supply
 - 4.7 kΩ pull-up resistor from SDA to 3.3 V
 - 4.7 kΩ pull-up resistor from SCL to 3.3 V
-- 5 V-to-3.3 V divider or suitable level shifter for XCLK
+- 5 V-to-3.3 V divider or suitable level shifter for MCLK
 - Short jumper wires
 - Recommended: 100 nF decoupling capacitor close to the camera module
 
@@ -51,7 +51,7 @@ A 3.3 V-compatible buffer such as a 74HCT245 or 74AHCT125 can improve signal rel
 | VSYNC | 2 / PE4 |
 | HREF | 8 / PH5 |
 | PCLK | 12 / PB6 |
-| XCLK | 10 / OC2A through a 5 V-to-3.3 V divider |
+| MCLK | 10 / OC2A through a 5 V-to-3.3 V divider |
 | SIOD | 20 / SDA, with 4.7 kΩ pull-up to 3.3 V |
 | SIOC | 21 / SCL, with 4.7 kΩ pull-up to 3.3 V |
 | RESET | 3.3 V |
@@ -135,7 +135,7 @@ The matching settings are:
 ```text
 Resolution: 640 × 480
 UART: 2,000,000 baud
-XCLK: 4 MHz
+MCLK: 4 MHz
 Frame size: 614,400 bytes
 ```
 
@@ -209,7 +209,7 @@ Change exposure only after frame timing and byte alignment are stable.
 
 The driver entered `fatalError()`. Common causes are:
 
-- XCLK is missing or connected incorrectly;
+- MCLK is missing or connected incorrectly;
 - SCCB wiring is incorrect;
 - SDA or SCL lacks a pull-up to 3.3 V;
 - the camera is not powered from 3.3 V;
@@ -235,7 +235,7 @@ Shorten the wires and consider a 74HCT/74AHCT input buffer.
 
 ### VGA stops before 100%
 
-The Mega has fallen behind the VGA stream. Check that both sides use 2 Mbps and that the VGA sketch uses 4 MHz XCLK. The mode may still be unreliable because the no-FIFO camera cannot pause while the Mega transmits data.
+The Mega has fallen behind the VGA stream. Check that both sides use 2 Mbps and that the VGA sketch uses 4 MHz MCLK. The mode may still be unreliable because the no-FIFO camera cannot pause while the Mega transmits data.
 
 ## Acknowledgements
 
